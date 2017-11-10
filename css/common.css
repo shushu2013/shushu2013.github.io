@@ -10,9 +10,13 @@ ul {
     list-style: none;
 }
 
-p {
+h4, p {
     margin: 0;
     padding: 0;
+}
+
+a {
+    display: inline-block;
 }
 
 .bl-white {

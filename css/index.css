@@ -4,17 +4,15 @@
     max-width: 800px;
 }
 
+.posts {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
 @media only screen and (max-width: 810px) {
     .main {
         margin: 80px 10px;
     }
-}
-
-.posts {
-    margin: 0px;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
 }
 
 .posts .item{
@@ -25,6 +23,14 @@
     border-bottom: none;
 }
 
+.posts a {
+    padding: 10px;
+    width: 100%;
+}
+
+.posts a:hover {
+    background: #ccc;
+}
 
 /* 文章页 */
 .post {
@@ -52,7 +58,16 @@ article h2 {
     border-bottom: 2px solid #ccc;
 }
 
+article h4 {
+    margin: 10px 0;
+}
+
+article p {
+    margin: 18px 0;
+}
+
 article a {
+    display: inline;
     color: purple;
     text-decoration: none;
     border-bottom: 1px dashed orange;
@@ -202,6 +217,7 @@ article img {
 .show .picture {
     max-width: 100%;
     max-height: 100px;
+    border-radius: 4px;
 }
 
 .show .end {
@@ -322,8 +338,9 @@ li span.actived:after {
 
 .side.hiddened {
     opacity: 0;
-    min-width: 0;
-    transform: translateX(-100%);
+    /* width: 0;
+    min-width: 0; */
+    margin-left: -50%;
 }
 
 .side .table {
@@ -337,20 +354,22 @@ li span.actived:after {
     vertical-align: middle;
 }
 
-.side ul li {
+.side ul a {
+    width: 100%;
     background: #333;
 }
 
 .side ul a:hover {
     text-decoration: none;
     color: orange;
+    background: rgba(33, 33, 33, 0.8);
 }
 
 .side-action {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
     .side-action {
         position: fixed;
@@ -361,9 +380,20 @@ li span.actived:after {
         height: 30px;
         z-index: 20;
         border-radius: 50%;
-        background: gray;
-        opacity: .9;
+        background: #ccc;
+        opacity: .8;
         box-shadow: 0 0 10px gray;
+    }
+
+    .side-action:after {
+        content: '';
+        display: inline-block;
+        margin: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: gray;
+        opacity: .8;
     }
 
 }
