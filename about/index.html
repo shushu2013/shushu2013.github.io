@@ -3,20 +3,33 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="applicable-device" content="pc,mobile" />
 
     
     <title>练习生</title>
 
     <!-- 加载 css -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/index.css">
+    
+        <link rel="stylesheet" href="/css/normalize.min.css">
+    
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+        <link rel="stylesheet" href="/css/index.min.css">
+    
+    
+    <!--[if lt IE 9]>
+        <!-- 兼容 IE 9 以下的腻子脚本 -->
+               
+		    <script src="/js/html5shiv.min.js"></script>  
+               
+		    <script src="/js/respond.min.js"></script>  
+        
+	<![endif]-->
 </head>
     <body>
         <!-- 导航栏 --> 
-<nav class="navbar navbar-default navbar-fixed-top bl-white">
+<nav class="navbar navbar-default navbar-fixed-top l-bg--white">
     <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
     <div class="container-fluid">
         <div class="navbar-header">
@@ -49,24 +62,24 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<div class="side hiddened">
-    <div class="table">
+<div class="c-side">
+    <div class="c-side__table">
         <ul>
             
                 
                      
                     <li>
-                        <a href="/">首页</a>
+                        <a class="js-touch" href="/">首页</a>
                     </li>
                 
                      
                     <li>
-                        <a href="/hobby">兴趣</a>
+                        <a class="js-touch" href="/hobby">兴趣</a>
                     </li>
                 
                      
                     <li>
-                        <a href="/about">关于</a>
+                        <a class="js-touch" href="/about">关于</a>
                     </li>
                 
             
@@ -74,15 +87,15 @@
     </div>
 </div>
 
-<div class="side-action">
+<div class="c-action js-action">
 </div>
-<div class="main">
-    <div class="about bl-container">
+<div class="l-container">
+    <div class="c-about l-wrapper">
         
 
         <!-- info 信息展示 -->
         
-    <div class="center-align">
+    <div class="u-center-align">
         <div class="avatar" style="background-image:url('http://oet93w0rc.bkt.clouddn.com/image/github/avatar.jpg')">
             <span class="mask">
                 生命练习生
@@ -95,14 +108,14 @@
         <!-- contract 信息展示 -->
         
 
-    <div class="show center-align">
+    <div class="c-show u-center-align">
 
-        <div class="xline">
+        <div class="c-show__line--large">
             <span></span>
         </div>
 
-        <div class="title left-border">
-            <span>联系方式<span>
+        <div class="c-show__title c-show__title--left">
+            <span>联系方式</span>
         </div>
 
         
@@ -111,11 +124,11 @@
 
             
 
-                <div class="dot">
+                <div class="c-show__dot">
                     <span></span>
                 </div>
 
-                <div class="left" style="top: 95px">
+                <div class="c-show__info c-show__info--left" style="top: 95px">
                     <a href="https://space.bilibili.com/10411908" target="_blank">
                         哔哩哔哩
                         <img src="/icon/bilibili.svg" width="30px" />
@@ -129,11 +142,11 @@
 
             
             
-                <div class="line">
+                <div class="c-show__line">
                     <span></span>
                 </div>
 
-                <div class="right" style="top: 145px">
+                <div class="c-show__info c-show__info--right" style="top: 145px">
                     <a href="https://weibo.com/2495087303" target="_blank">
                         <img src="/icon/weibo.svg" width="30px" />
                         微博
@@ -147,11 +160,11 @@
 
             
 
-                <div class="dot">
+                <div class="c-show__dot">
                     <span></span>
                 </div>
 
-                <div class="left" style="top: 195px">
+                <div class="c-show__info c-show__info--left" style="top: 195px">
                     <a href="https://github.com/shushu2013" target="_blank">
                         Github
                         <img src="/icon/github.svg" width="30px" />
@@ -170,14 +183,14 @@
         <!-- skills 信息展示 -->
         
 
-    <div class="show center-align">
+    <div class="c-show u-center-align">
 
-        <div class="xline">
+        <div class="c-show__line--large">
             <span></span>
         </div>
 
-        <div class="title right-border">
-            <span>技能<span>
+        <div class="c-show__title c-show__title--right">
+            <span>技能</span>
         </div>
 
         
@@ -185,40 +198,40 @@
             
 
             
-                <div class="dot">
+                <div class="c-show__dot">
                     <span></span>
                 </div>
             
 
 
-            <div class="left" style="top: 95px">
+            <div class="c-show__info c-show__info--left" style="top: 95px">
                 javascript : 
                 <img src="/icon/javascript.svg" width="30px" />
             </div>
 
-            <div class="right" style="top: 95px">
+            <div class="c-show__info c-show__info--right" style="top: 95px">
                  
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                  
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
             </div>
 
@@ -227,40 +240,40 @@
             
 
             
-                <div class="line">
+                <div class="c-show__line">
                     <span></span>
                 </div>
             
 
 
-            <div class="left" style="top: 145px">
+            <div class="c-show__info c-show__info--left" style="top: 145px">
                 html5 : 
                 <img src="/icon/html5.svg" width="30px" />
             </div>
 
-            <div class="right" style="top: 145px">
+            <div class="c-show__info c-show__info--right" style="top: 145px">
                  
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                  
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
             </div>
 
@@ -269,40 +282,40 @@
             
 
             
-                <div class="dot">
+                <div class="c-show__dot">
                     <span></span>
                 </div>
             
 
 
-            <div class="left" style="top: 195px">
+            <div class="c-show__info c-show__info--left" style="top: 195px">
                 css3 : 
                 <img src="/icon/css3.svg" width="30px" />
             </div>
 
-            <div class="right" style="top: 195px">
+            <div class="c-show__info c-show__info--right" style="top: 195px">
                  
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                  
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
             </div>
 
@@ -311,40 +324,40 @@
             
 
             
-                <div class="line">
+                <div class="c-show__line">
                     <span></span>
                 </div>
             
 
 
-            <div class="left" style="top: 245px">
+            <div class="c-show__info c-show__info--left" style="top: 245px">
                 java : 
                 <img src="/icon/java.svg" width="30px" />
             </div>
 
-            <div class="right" style="top: 245px">
+            <div class="c-show__info c-show__info--right" style="top: 245px">
                  
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                  
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 
             </div>
 
@@ -352,7 +365,7 @@
         
         
         
-            <div class="dot">
+            <div class="c-show__dot">
                 <span></span>
             </div>
         
@@ -363,17 +376,17 @@
         <!-- projects 信息展示 -->
         
 
-    <div class="show center-align">
+    <div class="c-show u-center-align">
 
-        <div class="line">
+        <div class="c-show__line">
             <span></span>
         </div>
 
-        <div class="title left-border">
-            <span>项目<span>
+        <div class="c-show__title c-show__title--left">
+            <span>项目</span>
         </div>
 
-        <div class="line">
+        <div class="c-show__line">
             <span></span>
         </div>
         
@@ -382,19 +395,19 @@
             
 
             
-                <div class="dot">
+                <div class="c-show__dot">
                     <span></span>
                 </div>
             
 
 
-            <div class="right" style="top: 155px">
+            <div class="c-show__info c-show__info--right" style="top: 155px">
                 <a href="https://github.com/shushu2013/MYblog"  target="_blank" >多人博客系统</a> 
             </div>
 
-            <div class="left" style="top: 155px; margin-top: -30px;">
+            <div class="c-show__info c-show__info--left" style="top: 155px; margin-top: -30px;">
                 
-                    <img class="picture" src="http://oet93w0rc.bkt.clouddn.com/image/github/myblog.png" />
+                    <img class="c-show__pic" src="http://oet93w0rc.bkt.clouddn.com/image/github/myblog.png" />
                 
             </div>
 
@@ -403,19 +416,19 @@
             
 
             
-                <div class="xline">
+                <div class="c-show__line--large">
                     <span></span>
                 </div>
             
 
 
-            <div class="right" style="top: 275px">
+            <div class="c-show__info c-show__info--right" style="top: 275px">
                 <a href="https://github.com/shushu2013/brisklife"  target="_blank" >Hexo 主题 brisklife</a> 
             </div>
 
-            <div class="left" style="top: 275px; margin-top: -30px;">
+            <div class="c-show__info c-show__info--left" style="top: 275px; margin-top: -30px;">
                 
-                    <img class="picture" src="http://oet93w0rc.bkt.clouddn.com/image/github/brisklife.png" />
+                    <img class="c-show__pic" src="http://oet93w0rc.bkt.clouddn.com/image/github/brisklife.png" />
                 
             </div>
 
@@ -423,7 +436,7 @@
         
         
         
-            <div class="dot">
+            <div class="c-show__dot">
                 <span></span>
             </div>
         
@@ -432,13 +445,13 @@
 
 
         <!-- 结束信息展示 -->
-        <div class="show center-align">
+        <div class="c-show u-center-align">
 
-    <div class="xline">
+    <div class="c-show__line">
         <span></span>
     </div>
 
-    <div class="end">
+    <div class="c-show__end">
         THANK YOU!
     </div>
 </div>
@@ -446,9 +459,14 @@
 </div>
 
 
+
+        <!-- 加载 js -->
         
-        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="/js/index.js"></script>
+            <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        
+            <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+            <script src="/js/index.min.js"></script>
+        
     </body>
 </html>

@@ -3,20 +3,33 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="applicable-device" content="pc,mobile" />
 
     
     <title>练习生</title>
 
     <!-- 加载 css -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/index.css">
+    
+        <link rel="stylesheet" href="/css/normalize.min.css">
+    
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+        <link rel="stylesheet" href="/css/index.min.css">
+    
+    
+    <!--[if lt IE 9]>
+        <!-- 兼容 IE 9 以下的腻子脚本 -->
+               
+		    <script src="/js/html5shiv.min.js"></script>  
+               
+		    <script src="/js/respond.min.js"></script>  
+        
+	<![endif]-->
 </head>
     <body>
         <!-- 导航栏 --> 
-<nav class="navbar navbar-default navbar-fixed-top bl-white">
+<nav class="navbar navbar-default navbar-fixed-top l-bg--white">
     <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
     <div class="container-fluid">
         <div class="navbar-header">
@@ -49,24 +62,24 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<div class="side hiddened">
-    <div class="table">
+<div class="c-side">
+    <div class="c-side__table">
         <ul>
             
                 
                      
                     <li>
-                        <a href="/">首页</a>
+                        <a class="js-touch" href="/">首页</a>
                     </li>
                 
                      
                     <li>
-                        <a href="/hobby">兴趣</a>
+                        <a class="js-touch" href="/hobby">兴趣</a>
                     </li>
                 
                      
                     <li>
-                        <a href="/about">关于</a>
+                        <a class="js-touch" href="/about">关于</a>
                     </li>
                 
             
@@ -74,16 +87,16 @@
     </div>
 </div>
 
-<div class="side-action">
+<div class="c-action js-action">
 </div>
-<div class="main">
+<div class="c-list l-container">
     <!-- 所有文章列表 -->
     
         <p class="text-success">博主加油！已累计发布 1 篇文章 </p>
-        <ul class="posts">
+        <ul class="c-list__posts">
             
-                <li class="item">
-                    <h4><a href="/2017/11/02/style-of-writing/">文章写作风格</a></h4>
+                <li class="c-list__item">
+                    <a href="/2017/11/02/style-of-writing/"><h4>文章写作风格</h4></a>
                 </li>
             
         </ul>
@@ -92,9 +105,14 @@
 </div>
 
 
+
+        <!-- 加载 js -->
         
-        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="/js/index.js"></script>
+            <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        
+            <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+            <script src="/js/index.min.js"></script>
+        
     </body>
 </html>

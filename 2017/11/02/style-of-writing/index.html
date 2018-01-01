@@ -3,20 +3,33 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="applicable-device" content="pc,mobile" />
 
     
     <title>练习生</title>
 
     <!-- 加载 css -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/index.css">
+    
+        <link rel="stylesheet" href="/css/normalize.min.css">
+    
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+        <link rel="stylesheet" href="/css/index.min.css">
+    
+    
+    <!--[if lt IE 9]>
+        <!-- 兼容 IE 9 以下的腻子脚本 -->
+               
+		    <script src="/js/html5shiv.min.js"></script>  
+               
+		    <script src="/js/respond.min.js"></script>  
+        
+	<![endif]-->
 </head>
     <body>
-        <div class="post">
-    <article>
+        <div class="c-post">
+    <article class="l-wrapper">
         <h2>文章写作风格</h2>
         <h4 id="1、主题唯一"><a href="#1、主题唯一" class="headerlink" title="1、主题唯一"></a>1、主题唯一</h4><p>一篇文章不宜谈大而杂的问题，因为往往很难写到点上，阅读者不知道读的是什么，写文章的人不知道写的是什么，达不到写文章的目的。</p>
 <p>只谈其中一个点，屏蔽无关问题，才能写清楚，写明白。</p>
@@ -27,9 +40,14 @@
 </div>
 
 
+
+        <!-- 加载 js -->
         
-        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="/js/index.js"></script>
+            <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        
+            <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+            <script src="/js/index.min.js"></script>
+        
     </body>
 </html>
