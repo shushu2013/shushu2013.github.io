@@ -6,1141 +6,384 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>简历</title>
+  <link rel="stylesheet" href="/css/cv.min.css">
 </head>
-
 <body>
-  <style>
-    html,
-    body,
-    div,
-    p {
-      margin: 0;
-      padding: 0
-    }
-
-    body {
-      font-size: 14px;
-      font-family: STFangSong,Helvetica,Arial,Vernada,Tahoma,STXihei,"Microsoft YaHei","Songti SC",SimSun,Heiti,sans-serif;
-      background-color: #ffffff;
-      margin: 40px 0;
-    }
-
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-      table-layout: fixed
-    }
-
-    th,
-    td {
-      font-size: 14px;
-      padding: 0
-    }
-
-    a {
-      text-decoration: none
-    }
-
-    img {
-      border: 0 none
-    }
-
-    .blue {
-      text-decoration: none;
-      color: #3c3d5d
-    }
-
-    .chead {
-      width: 1002px
-    }
-
-    .chead .logo {
-      width: 698px;
-      height: 90px
-    }
-
-    .chead .txt {
-      width: 152px;
-      height: 90px
-    }
-
-    .column {
-      width: 1002px;
-      line-height: 28px;
-      border: 1px solid #dedede
-    }
-
-    .column .hbox {
-      width: 185px;
-      height: 154px
-    }
-
-    .column .head {
-      display: block;
-      background-color: #fafafa
-    }
-
-    .column .box {
-      width: 100%;
-      background-color: #ffffff;
-      border-top: 2px solid #f2f3f5
-    }
-
-    .column .box1 {
-      width: 100%;
-      word-wrap: break-word;
-      color: #ffffff;
-      background-color: #3f4160
-    }
-
-    .column .box2 {
-      width: 100%;
-      background-color: #f8f9fa
-    }
-
-    .column .tba {
-      width: 940px;
-      padding: 0 30px 15px
-    }
-
-    .column .tbb {
-      width: 940px;
-      padding: 0 30px
-    }
-
-    .column .tb1 {
-      width: 900px;
-      line-height: 28px;
-      color: #333333;
-      word-break: break-all;
-      padding: 0 20px
-    }
-
-    .column .tb2 {
-      width: 430px;
-      padding: 0 20px
-    }
-
-    .column .tb3 {
-      width: 900px;
-      padding: 15px 20px 15px 0
-    }
-
-    .column .gray,
-    .column .gray2 {
-      color: #999999;
-      word-break: break-all
-    }
-
-    .column .gray2 {
-      color: #666666
-    }
-
-    .column .plate1,
-    .column .plate2 {
-      width: 430px;
-      height: 54px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #818ba3
-    }
-
-    .column .plate1 {
-      width: 900px;
-      padding: 0 50px
-    }
-
-    .column .plate1 .f16 {
-      font-size: 14px;
-      font-weight: normal;
-      color: #333333
-    }
-
-    .column .plate1 .f12 {
-      font-size: 12px;
-      font-weight: normal;
-      color: #999999
-    }
-
-    .column .keys,
-    .column .keys2 {
-      width: 85px;
-      line-height: 28px;
-      color: #666666
-    }
-
-    .column .keys2 {
-      width: 110px
-    }
-
-    .column .txt1,
-    .column .txt2,
-    .column .txt3 {
-      width: 815px;
-      line-height: 28px;
-      font-size: 14px;
-      color: #333333;
-      word-break: break-all
-    }
-
-    .column .txt2 {
-      width: 345px;
-      font-size: 14px;
-    }
-
-    .column .txt3 {
-      width: auto;
-      max-width: 815px;
-      font-size: 14px;
-      font-weight: bold
-    }
-
-    .column .txt4 {
-      width: 305px;
-      color: #ffffff;
-      word-break: break-all
-    }
-
-    .column .infr {
-      width: 767px;
-      color: #ffffff;
-      table-layout: auto
-    }
-
-    .column .vam,
-    .column .grcha {
-      vertical-align: middle;
-      margin-left: 5px
-    }
-
-    .column .box1 .vam {
-      margin-right: 5px;
-      margin-left: 0
-    }
-
-    .column .name {
-      font-size: 24px;
-      padding-bottom: 18px
-    }
-
-    .column .icard {
-      color: #a1a3ae;
-      padding-bottom: 18px
-    }
-
-    .column .con {
-      border-top: 1px dotted #ddd
-    }
-
-    .column .pr20 {
-      width: 225px;
-      padding-right: 20px
-    }
-
-    .column .time {
-      width: 120px;
-      line-height: 28px;
-      color: #666666;
-      padding-left: 20px
-    }
-
-    .column .rtbox {
-      width: 765px;
-      line-height: 28px;
-      color: #333333;
-      padding: 0 20px 0 15px;
-      word-break: break-all
-    }
-
-    .column .hai,
-    .column .guan {
-      line-height: 18px;
-      font-size: 12px;
-      color: #ffffff;
-      vertical-align: text-top;
-      margin-left: 5px;
-      padding: 1px 3px;
-      background-color: #3cbe7f;
-      border-radius: 2px
-    }
-
-    .column .guan {
-      background-color: #ff9f20
-    }
-
-    .column .tag {
-      display: inline-block;
-      word-break: break-all;
-      #display: inline;
-      #zoom: 1
-    }
-
-    .column .all {
-      color: #666;
-      padding: 10px 20px;
-      background-color: #fafafa
-    }
-
-    .column .tit {
-      width: 900px;
-      height: 40px;
-      color: #666666;
-      padding: 0 20px;
-      background-color: #f5f5f5
-    }
-
-    .column .p15 {
-      padding: 15px 0
-    }
-
-    .column .p5 {
-      display: inline-block;
-      color: #666666;
-      padding: 0 5px;
-      #display: inline;
-      #zoom: 1
-    }
-
-    .column .cell .skill {
-      width: 165px;
-      text-align: right;
-      padding-right: 15px
-    }
-
-    .column .cell .skbg,
-    .column .cell .skco {
-      display: inline-block;
-      width: 245px;
-      height: 18px;
-      line-height: 18px;
-      font-size: 12px;
-      color: #ffffff;
-      vertical-align: top;
-      margin-top: 6px;
-      background-color: #dddddd;
-      border-radius: 20px;
-      #display: inline;
-      #zoom: 1
-    }
-
-    .column .cell .skco {
-      width: 235px;
-      font-style: normal;
-      margin-top: 0;
-      padding-left: 10px;
-      background-color: #ff9f20;
-      z-index: 3
-    }
-
-    .column .sl .skco {
-      width: 173px
-    }
-
-    .column .lh .skco {
-      width: 112px
-    }
-
-    .column .yb .skco {
-      width: 51px
-    }
-
-    .column .fbox strong {
-      font-size: 14px;
-      font-weight: bold
-    }
-
-    .column .cha {
-      font-size: 12px;
-      font-weight: normal;
-      color: #00457d;
-      margin-left: 5px
-    }
-
-    .column .cha:hover {
-      color: #ff6000
-    }
-
-    .column .email {
-      width: 330px
-    }
-
-    .eng td,
-    .eng .txt3,
-    .eng .fbox strong {
-      font-size: 13px;
-      font-family: 'Arial'
-    }
-
-    .eng .txt1,
-    .eng .rtbox,
-    .eng .phd {
-      width: 775px;
-      font-size: 13px;
-      font-family: 'Arial';
-      line-height: 28px
-    }
-
-    .eng .txt2 {
-      width: 305px
-    }
-
-    .eng .txt4 {
-      width: 245px
-    }
-
-    .eng .cell .txt3 {
-      width: 120px
-    }
-
-    .eng .time,
-    .eng .keys {
-      width: 110px;
-      font-size: 13px;
-      text-align: right
-    }
-
-    .eng .cell .skill {
-      width: 130px
-    }
-
-    .eng .phd {
-      padding-left: 145px
-    }
-
-    .eng .keys {
-      padding-right: 15px
-    }
-
-    .eng .pr20 {
-      width: 205px
-    }
-
-    .eng .pr20 .keys {
-      width: 100px
-    }
-
-    .eng .email {
-      width: 270px
-    }
-  </style>
-  <table cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="column">
-    <tbody>
-      <tr>
-        <td valign="top">
-          <table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box1">
-            <tbody>
-              <tr>
-                <td class="hbox" align="middle"><img src="http://oet93w0rc.bkt.clouddn.com/image/github/cv_avatar.jpg?imageMogr2/interlace/1" width="85" height="104" class="head" alt="头像"></td>
-                <td>
-                  <table cellspacing="0" cellpadding="0" border="0" class="infr">
-                    <tbody>
-                      <tr>
-                        <td colspan="2" class="name">吴文波</td>
-                        <td align="right" class="icard"></td>
-                      </tr>
-                      <tr>
-                        <td valign="top">
-                          <img class="vam" src="./cv_images/y1.png" width="20" height="20">目前正在找工作</td>
-                        <td valign="top">
-                          <img class="vam" src="./cv_images/y2.png" width="20" height="20">18234126881</td>
-                        <td valign="top">
-                          <table cellspacing="0" cellpadding="0" border="0" class="email">
-                            <tbody>
-                              <tr>
-                                <td width="25"><img class="vam" src="./cv_images/y3.png" width="20" height="20"></td>
-                                <td valign="top" class="txt4">1252093436@qq.com</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td valign="top" colspan="3">
-                          <p><img class="vam" src="./cv_images/y4.png" width="20" height="20">男<span class="p5">|</span>24 岁
-                            (1993/03/10)<span class="p5">|</span>现居住上海-普陀区<span class="p5">|</span>1年工作经验
-                          </p>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box2">
-            <tbody>
-              <tr>
-                <td class="tba">
-                  <table cellspacing="0" cellpadding="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td valign="top" class="tb2">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <thead style="height:0">
-                              <tr>
-                                <td valign="top" class="keys"></td>
-                                <td valign="top" class="txt2"></td>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td colspan="2" class="plate2">个人信息</td>
-                              </tr>
-                              <tr>
-                                <td valign="top" class="keys">QQ号：</td>
-                                <td valign="top" class="txt2">1252093436</td>
-                              </tr>
-                              <tr>
-                                <td valign="top" class="keys">身高：</td>
-                                <td valign="top" class="txt2">170cm</td>
-                              </tr>
-                              <tr>
-                                <td valign="top" class="keys">户口/国籍：</td>
-                                <td valign="top" class="txt2">江西 抚州</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                        <td valign="top" class="tb2">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <thead style="height:0">
-                              <tr>
-                                <td valign="top" class="keys"></td>
-                                <td valign="top" class="txt2"></td>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td colspan="2" class="plate2">最高学历/学位</td>
-                              </tr>
-                              <tr>
-                                <td valign="top" class="keys">专业：</td>
-                                <td valign="top" class="txt2">信息与计算科学</td>
-                              </tr>
-                              <tr>
-                                <td valign="top" class="keys">学校：</td>
-                                <td valign="top" class="txt2">山西大学</td>
-                              </tr>
-                              <tr>
-                                <td valign="top" class="keys">学历/学位：</td>
-                                <td valign="top" class="txt2">本科</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box">
-            <tbody>
-              <tr>
-                <td class="plate1">求职意向</td>
-              </tr>
-              <tr>
-                <td class="tba">
-                  <table cellspacing="0" cellpadding="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td class="tb2" valign="top">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="keys">期望薪资：</td>
-                                <td valign="top" class="txt2"> 8k / 月 </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                        <td class="tb2" valign="top">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="keys">地点：</td>
-                                <td valign="top" class="txt2"><span class="tag">上海</span></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tb2" valign="top">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="keys">期望职位：</td>
-                                <td valign="top" class="txt2">
-                                  <span class="tag">Web 前端开发</span>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                        <td class="tb2" valign="top">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="keys">行业：</td>
-                                <td valign="top" class="txt2"><span class="tag">计算机软件</span></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tb2" valign="top">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="keys">到岗时间：</td>
-                                <td valign="top" class="txt2">1周内</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                        <td class="tb2" valign="top">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="keys">工作类型：</td>
-                                <td valign="top" class="txt2">全职</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tb1" colspan="2">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <thead style="height:0">
-                              <tr>
-                                <td valign="top" class="keys"></td>
-                                <td valign="top" class="txt1"></td>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="keys">自我评价：</td>
-                                <td valign="top" class="txt1">1、 熟悉HTML5+CSS3、DIV+CSS等网站前端技术；
-                                  <br>2、 熟练掌握 Javascript语言，能够实利用 JQuery、Bootstrap，实现网页的动态效果与页面交互；<br>3、熟悉响应式设计，能够开发移动端页面；<br>4、熟悉前端工程化技术(如
-                                  Gulp/Webpack/LESS)；<br>5、了解NodeJS后台，熟练掌握Ajax技术； <br>6、了解 Angular/React/Vue等前端框架； <br>7、热爱学习，对新技术有强烈的好奇心；</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box">
-            <tbody>
-              <tr>
-                <td class="plate1">个人项目</td>
-              </tr>
-              <tr>
-                <td class="tba">
-                  <table cellspacing="0" cellpadding="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td class="p15">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2017/6-2017/8</td>
-                                <td valign="top" class="rtbox"><strong>多人博客网站</strong></td>
-                              </tr>
-                              <tr>
-                                <td class="tb1" colspan="2">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td valign="top" class="keys">项目描述：</td>
-                                        <td valign="top" class="txt1">前端：Bootstrap3 + jQuery<br>后端：Node + Express4 + Mongodb</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="tb1" colspan="2">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td valign="top" class="keys">责任描述：</td>
-                                        <td valign="top" class="txt1">采用 MVC 模式，实现注册、登录、个人设置、发表博文、个人主页及所有博文展示等功能<br>解决了图片上传，文章分页等功能</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="p15 con">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2017/4-2017/5</td>
-                                <td valign="top" class="rtbox"><strong>响应式单页面应用</strong></td>
-                              </tr>
-                              <tr>
-                                <td class="tb1" colspan="2">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td valign="top" class="keys">项目描述：</td>
-                                        <td valign="top" class="txt1">Bootstrap3 + jQuery + 响应式布局</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="tb1" colspan="2">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td valign="top" class="keys">责任描述：</td>
-                                        <td valign="top" class="txt1">开发一个响应式的单页面应用，主要对卖家的服务、产品进行介绍和展示，后期运用 less + gulp 进行重构，增加项目的可维护性。</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box">
-            <tbody>
-
-              <tr>
-                <td class="plate1">工作经验</td>
-              </tr>
-              <tr>
-                <td class="tbb">
-                  <table cellspacing="0" cellpadding="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td class="p15">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2017/1-2017/12</td>
-                                <td valign="top" class="rtbox">
-                                  <strong class="txt3">自学前端+网店后台运营</strong><span class="p5">|</span><span>网店后台运营</span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="phd tb1" colspan="2">
-
-                                </td>
-                              </tr>
-
-                              <tr>
-                                <td class="tb1" colspan="2">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td valign="top" class="keys">工作描述：</td>
-                                        <td valign="top" class="txt1">1、系统学习了 HTML、CSS、JS，熟悉 jQuery 和 Bootstrap 的使用；<br>2. 熟悉 NodeJS 及 Express 框架，并基于此开发了多人博客系统；<br>3.
-                                          系统学过 Angular 2 文档，做过相关 Demo ,了解 vue 和 react 的用法<br>4.了解前端工程化技术 gulp/webpack/less/ejs
-                                          的使用；</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="p15">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2016/6-2016/12</td>
-                                <td valign="top" class="rtbox">
-                                  <strong class="txt3">软件工程师</strong><span class="p5">|</span><span>大数据事业部</span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="phd tb1" colspan="2">
-                                  <span>上海宝信软件股份有限公司</span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="phd tb1 gray2" colspan="2">计算机软件<span class="p5">|</span>50-150人<span class="p5">|</span>外企代表处</td>
-                              </tr>
-                              <tr>
-                                <td class="tb1" colspan="2">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td valign="top" class="keys">工作描述：</td>
-                                        <td valign="top" class="txt1">1. 熟悉前端报表展现系统相关框架和技术（congos、数据抽取等），并解决系统开发、运行中出现的各种问题；比如：业务逻辑的调整，查找并解决前端数据异常原因。<br>2.
-                                          数据库使用DB2来编写相关的业务逻辑；<br>3. 维护后台Java相关项目。</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="p15 con">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2015/8-2016/4</td>
-                                <td valign="top" class="rtbox">
-                                  <strong class="txt3">软件工程师</strong><span class="p5">|</span><span>辅导和开发</span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="phd tb1" colspan="2">
-                                  <span>三个一工程公益教育</span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="phd tb1 gray2" colspan="2">非盈利机构<span class="p5">|</span>少于50人<span class="p5">|</span>非营利机构</td>
-                              </tr>
-                              <tr>
-                                <td class="tb1" colspan="2">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td valign="top" class="keys">工作描述：</td>
-                                        <td valign="top" class="txt1">辅导大三计算机及相关专业学生的学习，并参与团队项目开发。在APPCloud平台利用HTML、JavaScript进行WebApp开发，并利用Java开发办公系统中的财务模块。</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table xmlns="" class="box">
-            <tbody>
-              <tr>
-                <td class="plate1">教育经历</td>
-              </tr>
-              <tr>
-                <td class="tba">
-                  <table cellspacing="0" cellpadding="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td class="p15">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2011/9-2015/7</td>
-                                <td valign="top" class="rtbox"><strong>山西大学</strong></td>
-                              </tr>
-                              <tr>
-                                <td class="tb1" colspan="2">本科<span class="p5">|</span>信息与计算科学</td>
-                              </tr>
-                              <tr>
-                                <td class="tb1" colspan="2">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td valign="top" class="keys">专业描述：</td>
-                                        <td valign="top" class="txt1">学习数学与计算机。<br><br>数学：数学分析、高等代数、离散数学、常微分方程、概率论与数理统计<br><br>计算机：c语言、数据库、数据结构、操作系统、通信原理、C++primer、深入理解计算机系统、操作系统在哲学原理、Linux</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box">
-            <tbody>
-              <tr>
-                <td class="plate1">在校情况</td>
-              </tr>
-              <tr>
-                <td class="tbb">
-                  <table cellspacing="0" cellpadding="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td class="tit">校内荣誉</td>
-                      </tr>
-                      <tr>
-                        <td class="tb3">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2013/4</td>
-                                <td valign="top" class="rtbox">
-                                  <strong class="txt3">奖学金</strong><span>（丙等）</span>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tb3 con">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2012/10</td>
-                                <td valign="top" class="rtbox">
-                                  <strong class="txt3">奖学金</strong><span>（丙等）</span>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tb3 con">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2012/4</td>
-                                <td valign="top" class="rtbox">
-                                  <strong class="txt3">奖学金</strong><span>（丙等）</span>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table xmlns="" cellspacing="0" cellpadding="0" border="0" class="box">
-            <tbody>
-              <tr>
-                <td class="plate1">
-                  技能特长
-                  <span class="f12">（包括IT技能、语言能力、证书、成绩、培训经历）</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="tbb">
-                  <table cellspacing="0" cellpadding="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td class="tit">技能/语言</td>
-                      </tr>
-                      <tr>
-                        <td class="p15">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td class="tb2 cell lh" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">英语</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">良好</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                                <td class="tb2 cell lh" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">SQL</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">良好</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="tb2 cell lh" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">Photoshop</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">良好</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                                <td class="tb2 cell lh" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">DB2</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">良好</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="tb2 cell lh" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">Web前端</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">良好</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                                <td class="tb2 cell lh" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">Linux</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">良好</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="tb2 cell lh" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">HTML5</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">良好</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                                <td class="tb2 cell sl" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">HTML</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">熟练</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="tb2 cell sl" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">Java</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">熟练</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                                <td class="tb2 cell sl" valign="top">
-                                  <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                      <tr>
-                                        <td class="skill"><strong class="txt3">JavaScript</strong></td>
-                                        <td valign="top"><span class="skbg"><span class="skco">熟练</span></span>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <table cellspacing="0" cellpadding="0" border="0">
-                    <tbody>
-                      <tr>
-                        <td class="tit">证书</td>
-                      </tr>
-                      <tr>
-                        <td class="tb3">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2014/6</td>
-                                <td valign="top" class="rtbox">
-                                  <strong class="txt3">大学英语四级</strong><span>
-                      （508）
-                    </span>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tb3 con">
-                          <table cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                              <tr>
-                                <td valign="top" class="time">2013/12</td>
-                                <td valign="top" class="rtbox">
-                                  <strong class="txt3">全国大学生数模竞赛</strong><span>
-                      （二等奖）
-                    </span>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="c-cv">
+    <div class="c-cv__title">
+      <div class="c-cv__avatar">
+        <img src="http://oet93w0rc.bkt.clouddn.com/image/github/cv_avatar.jpg?imageMogr2/interlace/1" alt="头像">
+      </div>
+      <div class="c-cv__summary">
+        <div class="u-vertical-middle u-line-height">
+          <div class="name">吴文波</div>
+          <div>
+            <span class="vcm"><img src="./cv_images/y1.png" class="u-vertical-middle">目前正在找工作</span>
+            <span class="vcm"><img src="./cv_images/y2.png" class="u-vertical-middle">18234126881</span>
+            <span class="vcm"><img src="./cv_images/y3.png" class="u-vertical-middle">1252093436@qq.com</span>
+          </div>
+          <div>
+            <p>
+              <img src="./cv_images/y4.png" class="u-vertical-middle">
+              <span>男</span>
+              <span class="c-cv__line">|</span>
+              <span>25岁 (1993/03/10)</span>
+              <span class="c-cv__line">|</span>
+              <span>现居住上海-普陀区</span>
+              <span class="c-cv__line">|</span>
+              <span>1年半工作经验</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-cv__info c-cv__userinfo u-overflow-hidden">
+      <div class="c-cv__info__item u-float-left">
+        <div class="item__title">个人信息</div>
+        <div>
+          <span class="item__key">QQ号：</span>
+          <span class="item__value">1252093436</span>
+        </div>
+        <div>
+          <span class="item__key">身高：</span>
+          <span class="item__value">170cm</span>
+        </div>
+        <div>
+          <span class="item__key">户口/国籍：</span>
+          <span class="item__value">江西 抚州</span>
+        </div>
+      </div>
+      <div class="c-cv__info__item u-float-left">
+        <div class="item__title">最高学历/学位</div>
+        <div>
+          <span class="item__key">专业：</span>
+          <span class="item__value">信息与计算科学</span>
+        </div>
+        <div>
+          <span class="item__key">学校：</span>
+          <span class="item__value">山西大学</span>
+        </div>
+        <div>
+          <span class="item__key">学历/学位：</span>
+          <span class="item__value">本科</span>
+        </div>
+      </div>
+    </div>
+    <div class="c-cv__info c-cv__info--border c-cv__intention u-overflow-hidden">
+        <div class="c-cv__info__item u-float-left">
+          <div class="item__title">求职意向</div>
+          <div>
+            <span class="item__key">期望薪资：</span>
+            <span class="item__value">8k / 月</span>
+          </div>
+          <div>
+            <span class="item__key">期望职位：</span>
+            <span class="item__value">Web 前端开发</span>
+          </div>
+          <div>
+            <span class="item__key">到岗时间：</span>
+            <span class="item__value">1周内</span>
+          </div>
+        </div>
+        <div class="c-cv__info__item u-float-left">
+          <div class="item__title"></div>
+          <div>
+            <span class="item__key">地点：</span>
+            <span class="item__value">上海</span>
+          </div>
+          <div>
+            <span class="item__key">行业：</span>
+            <span class="item__value">计算机软件</span>
+          </div>
+          <div>
+            <span class="item__key">工作类型：</span>
+            <span class="item__value">全职</span>
+          </div>
+        </div>
+        <div class="c-cv__info__item c-cv__info__item--long u-float-left">
+          <span class="item__key u-vertical-top">自我评价：</span>
+          <span class="item__value">
+            1、 熟悉HTML5+CSS3、DIV+CSS等网站前端技术；
+            <br>
+            2、 熟练掌握 Javascript语言，能够实利用 JQuery、Bootstrap，实现网页的动态效果与页面交互；
+            <br>
+            3、熟悉响应式设计，能够开发移动端页面；
+            <br>
+            4、熟悉前端工程化技术(如
+              Gulp/Webpack/LESS)；
+            <br>
+            5、了解NodeJS后台，熟练掌握Ajax技术； 
+            <br>
+            6、了解 Angular/React/Vue等前端框架； 
+            <br>
+            7、热爱学习，对新技术有强烈的好奇心；
+          </span>
+        </div>
+    </div>
+    <div class="c-cv__info c-cv__info--border c-cv__project">
+        <div class="c-cv__info__item c-cv__info__item--long">
+            <div class="item__title">个人项目</div>
+            <div class="item__project">
+              <div>
+                <span class="item__time">2017/6-2017/8</span>
+                <span class="item__value item__value--strong">多人博客网站</span>
+              </div>
+              <div>
+                <span class="item__key u-vertical-top">项目描述：</span>
+                <span class="item__value">
+                  前端：Bootstrap3 + jQuery
+                  <br>
+                  后端：Node + Express4 + Mongodb
+                </span>
+              </div>
+              <div>
+                <span class="item__key u-vertical-top">责任描述：</span>
+                <span class="item__value">
+                  采用 MVC 模式，实现注册、登录、个人设置、发表博文、个人主页及所有博文展示等功能
+                  <br>
+                  解决了图片上传，文章分页等功能
+                </span>
+              </div>
+            </div>
+            <div class="item__line"></div>
+            <div class="item__project">
+              <div>
+                <span class="item__time">2017/4-2017/5</span>
+                <span class="item__value item__value--strong">响应式单页面应用</span>
+              </div>
+              <div>
+                <span class="item__key u-vertical-top">项目描述：</span>
+                <span class="item__value">
+                    Bootstrap3 + jQuery + 响应式布局
+                  </span>
+              </div>
+              <div>
+                <span class="item__key u-vertical-top">责任描述：</span>
+                <span class="item__value">
+                    开发一个响应式的单页面应用，主要对卖家的服务、产品进行介绍和展示，后期运用 less + gulp 进行重构，增加项目的可维护性。
+                  </span>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="c-cv__info c-cv__info--border c-cv__workexp">
+        <div class="c-cv__info__item c-cv__info__item--long">
+            <div class="item__title">工作经验</div>
+            <div class="item__project">
+              <div>
+                <span class="item__time">2017/1-2017/12</span>
+                <span class="item__value item__value--strong">自学前端+网店后台运营</span>
+                <span class="c-cv__line">|</span>
+                <span class="item__value">网店后台运营</span>
+              </div>
+              <div>
+                <span class="item__key u-vertical-top">工作描述：</span>
+                <span class="item__value">
+                  1、系统学习了 HTML、CSS、JS，熟悉 jQuery 和 Bootstrap 的使用；
+                  <br>
+                  2. 熟悉 NodeJS 及 Express 框架，并基于此开发了多人博客系统；
+                  <br>
+                  3. 系统学过 Angular 2 文档，做过相关 Demo ,了解 vue 和 react 的用法；
+                  <br>
+                  4.了解前端工程化技术 gulp/webpack/less/ejs 的使用；
+                </span>
+              </div>
+            </div>
+            <div class="item__line"></div>
+            <div class="item__project">
+              <div>
+                <span class="item__time">2016/6-2016/12</span>
+                <span class="item__value item__value--strong">软件工程师</span>
+                <span class="c-cv__line">|</span>
+                <span class="item__value">大数据事业部</span>
+              </div>
+              <div><span class="item__value">上海宝信软件股份有限公司</span></div>
+              <div>
+                <span class="item__value">计算机软件</span>
+                <span class="c-cv__line">|</span>
+                <span class="item__value">50-150人</span>
+                <span class="c-cv__line">|</span>
+                <span class="item__value">外企代表处</span>
+              </div>
+              <div>
+                <span class="item__key u-vertical-top">工作描述：</span>
+                <span class="item__value">
+                  1. 熟悉前端报表展现系统相关框架和技术（congos、数据抽取等），并解决系统开发、运行中出现的各种问题；
+                  <br>
+                  比如：业务逻辑的调整，查找并解决前端数据异常原因。
+                  <br>
+                  2. 数据库使用DB2来编写相关的业务逻辑；
+                  <br>
+                  3. 维护后台Java相关项目。
+                </span>
+              </div>
+            </div>
+            <div class="item__line"></div>
+            <div class="item__project">
+                <div>
+                  <span class="item__time">2015/8-2016/4</span>
+                  <span class="item__value item__value--strong">软件工程师</span>
+                  <span class="c-cv__line">|</span>
+                  <span class="item__value">辅导和开发</span>
+                </div>
+                <div><span class="item__value">三个一公益教育</span></div>
+                <div>
+                  <span class="item__value">非盈利机构</span>
+                  <span class="c-cv__line">|</span>
+                  <span class="item__value">小于50人</span>
+                  <span class="c-cv__line">|</span>
+                  <span class="item__value">非营利机构</span>
+                </div>
+                <div>
+                  <span class="item__key u-vertical-top">工作描述：</span>
+                  <span class="item__value">
+                    1、辅导大三计算机及相关专业学生的学习，并参与团队项目开发。
+                    <br>
+                    2、在APPCloud平台利用HTML、JavaScript进行WebApp开发，并利用Java开发办公系统中的财务模块。
+                  </span>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="c-cv__info c-cv__info--border c-cv__education">
+      <div class="c-cv__info__item c-cv__info__item--long">
+        <div class="item__title">教育经历</div>
+        <div class="item__project">
+          <div>
+            <span class="item__time">2011/9-2015/7</span>
+            <span class="item__value item__value--strong">山西大学</span>
+          </div>
+          <div>
+            <span class="item__value">本科</span>
+            <span class="c-cv__line">|</span>
+            <span class="item__value">信息与计算科学</span>
+          </div>
+          <div>
+            <span class="item__key u-vertical-top">专业描述：</span>
+            <span class="item__value"> 
+              学习数学与计算机
+              <br> <br>
+              数学：数学分析、高等代数、离散数学、常微分方程、概率论与数理统计
+              <br> <br>
+              计算机：c语言、数据库、数据结构、操作系统、通信原理、C++primer、深入理解计算机系统、操作系统在哲学原理、Linux
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-cv__info c-cv__info--border c-cv__school">
+      <div class="c-cv__info__item c-cv__info__item--long">
+        <div class="item__title">在校情况</div>
+        <div class="item__ability">在校荣誉</div>
+        <div class="item__project">
+          <span class="item__time">2013/4</span>
+          <span class="item__value item__value--strong">奖学金</span>
+          <span class="item__value">（丙等）</span>
+        </div>
+        <div class="item__line"></div>
+        <div class="item__project">
+          <span class="item__time">2012/10</span>
+          <span class="item__value item__value--strong">奖学金</span>
+          <span class="item__value">（丙等）</span>
+        </div>
+        <div class="item__line"></div>
+        <div class="item__project">
+          <span class="item__time">2012/4</span>
+          <span class="item__value item__value--strong">奖学金</span>
+          <span class="item__value">（丙等）</span>
+        </div>
+      </div>
+    </div>
+    <div class="c-cv__info c-cv__info--border c-cv__skill">
+      <div class="c-cv__info__item c-cv__info__item--long">
+        <div class="item__title">
+          <span>技能特长</span>
+          <span class="item__title__detail">（包括IT技能、语言能力、证书、成绩、培训经历）</span>
+        </div>
+
+        <div>
+          <div class="item__ability">技能/语言</div>
+          <div class="item__project u-overflow-hidden">
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">英语</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--good">良好</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">SQL</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--good">良好</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">Photoshop</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--good">良好</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">DB2</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--good">良好</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">Web前端</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--good">良好</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">Linux</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--good">良好</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">HTML5</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--better">熟练</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">CSS</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--better">熟练</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">JavaScript</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--better">熟练</span>
+                </span>
+            </div>
+            <div class="item__skill u-float-left">
+                <span class="item__skill__title">Java</span>
+                <span class="item__skill__bg">
+                  <span class="skill--base skill--good">良好</span>
+                </span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="item__ability">证书</div>
+          <div class="item__project">
+            <span class="item__time">2014/6</span>
+            <span class="item__value item__value--strong">大学英语四级</span>
+            <span class="item__value">（508）</span>
+          </div>
+          <div class="item__line"></div>
+          <div class="item__project">
+            <span class="item__time">2013/12</span>
+            <span class="item__value item__value--strong">全国大学生数模竞赛</span>
+            <span class="item__value">（二等奖）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
