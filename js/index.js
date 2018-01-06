@@ -1,3 +1,8 @@
+// fastclick 
+$(function(){
+    FastClick.attach(document.documentElement);
+})
+
 // side
 $(function() {
     'use strict'
@@ -7,13 +12,15 @@ $(function() {
 
     $('html').on('click', function(e) {
         var target = $(e.target)
-        // console.log(target);
+        // console.log(e)
+        // console.log(target)
         // console.log(target.is(side));
-        if(!side.hasClass('is-hidden') && !target.is(action)) {
+        // $('.js-test').html('click action' + ': ' + target.is(action) + ' target : ' + target[0].tagName )
+        if(!side.hasClass('is-hidden') && !target.is(action) ) {
             side.addClass('is-hidden')
         }
 
-        if(target.is(action)) {
+        if(target.is(action) || target.is(action.children())) {
             side.toggleClass('is-hidden')
         }
         // console.log('click')
