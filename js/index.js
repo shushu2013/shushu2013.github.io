@@ -1,6 +1,6 @@
 // fastclick 
 $(function(){
-    FastClick.attach(document.documentElement);
+    FastClick.attach(document.body)
 })
 
 // side
@@ -15,7 +15,7 @@ $(function() {
         // console.log(e)
         // console.log(target)
         // console.log(target.is(side));
-        // $('.js-test').html('click action' + ': ' + target.is(action) + ' target : ' + target[0].tagName )
+        // $('.js-test').html('click time: ' + (++num) )
         if(!side.hasClass('is-hidden') && !target.is(action) ) {
             side.addClass('is-hidden')
         }
@@ -23,7 +23,6 @@ $(function() {
         if(target.is(action) || target.is(action.children())) {
             side.toggleClass('is-hidden')
         }
-        // console.log('click')
     })
 })
 
