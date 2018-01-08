@@ -54,6 +54,12 @@ body {
   line-height: 1.6;
   word-break: break-all;
 }
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  height: 100%;
+}
 ul {
   list-style: none;
 }
