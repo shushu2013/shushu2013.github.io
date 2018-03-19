@@ -92,6 +92,13 @@ a:visited {
   font-size: 14px;
   border: 1px solid #dedede;
 }
+.c-cv a {
+  color: #333;
+  border-bottom: 1px dotted ;
+}
+.c-cv a:visited {
+  color: #222;
+}
 .c-cv .c-cv__line {
   display: inline-block;
   color: #666;
