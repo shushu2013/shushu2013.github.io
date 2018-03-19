@@ -410,6 +410,11 @@ body {
   max-width: 100%;
   max-height: 100px;
   border-radius: 4px;
+  transition: all 0.6s 0s ease-in-out;
+}
+.c-show .c-show__info .c-show__pic:hover {
+  max-height: 300px;
+  transition: all 1s 0.2s ease-in-out;
 }
 .c-show .c-show__info .c-show-pic--gray {
   filter: grayscale(100%);
