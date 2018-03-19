@@ -94,7 +94,7 @@ a:visited {
 }
 .c-cv a {
   color: #333;
-  border-bottom: 1px dotted ;
+  border-bottom: 1px dotted rebeccapurple;
 }
 .c-cv a:visited {
   color: #222;
